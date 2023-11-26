@@ -1,0 +1,40 @@
+1. När använder man add respektive commit?
+	
+När man vill lägga till en modifierad fil i sin staging area använder man git add. Man kan lägga till flera filer
+i sin staging area, vilket tillåter en att committa många förändringar på samma gång.
+
+När man vill spara sina ändringar i git-historiken så använder man git commit. En commit sparar en specifik
+version av filerna i repositoriet, så att man till exempel kan återvända till tidigare versioner utan problem.
+
+
+2. Vad är pull repektive push?
+
+git pull gör två saker - först git fetch, som laddar ner ett remote repo till ens lokala repo, sedan git merge
+som inkorporerar remote repot i ens lokala repo. Med andra ord så hämtar man uppdateringar till sitt projekt från
+en annan källa, så man kan jobba vidare i en lokal miljö.
+
+git push använder man när man vill göra motsatsen; skicka sina lokala förändringar till ett remote repo.
+
+Ett exempel på hur dessa kommandon kan användas är att man hämtar filer/förändringar med git pull, jobbar på dom
+och lägger till/tar bort saker, sedan kör git push för att skicka tillbaka det uppdaterade repositoriet till
+ett remote repo på till exempel GitHub.
+
+
+3. När använder man log respektive status?
+
+För att se alla commits som har gjorts i ett repositorie kan man använda git log. Då får man upp en lista av
+commits, som även innehåller information om upphovsperson, datum och eventuell extra information om commiten.
+
+git status använder man när man vill få en överblick över repositoriets nuvarande status. Till exempel så kan man
+behöva information om vilka filer som ligger i staging area, eller om det har skett någon förändring som kan vara
+relevant att lägga till i nästa commit. Man får även information om vilken branch man arbetar i för tillfället.
+
+
+4. Vad är en Git branch och varför är de viktiga?
+
+En git branch är en förgrening av git-historiken, som tillåter en att jobba på flera saker parallellt i
+repositoriet utan att versionshistoriken i den huvudsakliga grenen ändras.
+
+Det är användbart på många sätt, men framförallt är branches ett viktigt verktyg för samarbete. Olika delar av ett
+program kan då utvecklas i sina egna grenar, vilket både blir enklare och mer överskådligt för alla inblandade.
+
